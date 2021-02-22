@@ -12,6 +12,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
+    
         $(document).ready(function() {
             $(".nav>li>a").removeClass("active"); //this will remove the active class from  
             //previously active menu item 
