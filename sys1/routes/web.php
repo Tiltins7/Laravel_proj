@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\sheepsController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 /*
@@ -12,12 +13,19 @@ use Illuminate\Support\Facades\DB;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/animal_species', function () { return view('animal_species');})->middleware('auth'); 
 
-Route::get('/animal_species', function () { return view('animal_species');})->middleware('auth');
+Route::group(['prefix'=>'animal-species','middleware' => 'auth'], function(){
+    Route::get('/sheeps', [sheepsController::class, "index"])->name('sheeps');
+});
+
+     
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+
 
 Route::resource('/admin/users', 'Admin\UsersController', ['except' => ['show', 'create', 'store']]);
 

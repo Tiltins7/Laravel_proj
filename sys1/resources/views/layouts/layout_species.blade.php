@@ -9,11 +9,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    
 
     <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/style_species.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
@@ -275,12 +276,16 @@
         <div class="main_container">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-3">
+                    
+                    <div class="col-sm-3" >
+                    <a style="color:white; text-decoration:none;" href="/animal-species/sheeps">
                         <img src="../pictures/sheep.jpg" alt="sheep" class="rounded">
                         <div class="jumbotron">
                             Aita
                         </div>
+                        </a>
                     </div>
+                    
                     <div class="col-sm-3">
                         <img src="../pictures/cow.jpg" alt="sheep" class="rounded">
                         <div class="jumbotron">

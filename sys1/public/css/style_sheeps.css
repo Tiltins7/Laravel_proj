@@ -1,0 +1,13 @@
+ .container{
+     margin-top:10px;
+ }
+ 
+ .table-center{
+    margin: 10px auto;
+    width: 66%;
+}
+
+.card-title{
+    font-weight: bold;
+    padding: 10px;
+}
