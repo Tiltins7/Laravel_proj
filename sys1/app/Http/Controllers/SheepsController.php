@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+ use App\Models\Company; 
+
 use App\Models\Sheeps;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -19,9 +21,5 @@ class sheepsController extends Controller
 
     return view('sheeps',['sheeps'=>$sheeps]);
     }
-
-    public function destroy($id) {
-        DB::delete('delete from sheeps where id = ?', [$id]);
-        echo "Record deleted successfully.<br/>";
-    }
+    
 }

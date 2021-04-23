@@ -23,9 +23,12 @@
     <div style="background-color:#e1ecf2;" class="jumbotron vertical-center ">
         <div class="container">
             <div class="card">
+                
                 <h5 class="card-title text-center">Aitu Saraksts</h5>
-                <div class="card-body">
+                <div class="card-body">  
+                     
                     <div class="table-center" id="center-table  ">
+                    <button type="button" class="btn btn-link"> + Pievienot</button>  
                         <table id="sheep_table" class="table table-striped table-bordered nowrap" tableStyle="width: auto;">
                             <thead>
                                 <tr>
