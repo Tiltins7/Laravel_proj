@@ -278,7 +278,7 @@
                 <div class="row">
                     
                     <div class="col-sm-3" >
-                    <a style="color:white; text-decoration:none;" href="/animal-species/sheeps">
+                    <a style="color:white; text-decoration:none;" href="/animal_species/sheeps">
                         <img src="../pictures/sheep.jpg" alt="sheep" class="rounded">
                         <div class="jumbotron">
                             Aita

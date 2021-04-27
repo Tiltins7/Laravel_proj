@@ -21,5 +21,32 @@ class sheepsController extends Controller
 
     return view('sheeps',['sheeps'=>$sheeps]);
     }
+
+    public function save(Request $req)
+    {
+        $animals = new Sheeps;
+        $animals->sheep_id=$req->id_nr;
+        $animals->dzimums=$req->dzimums;
+        $animals->vecums=$req->vecums;
+        $animals->save();
+        return redirect()->route('sheeps');
+    }
+
+    public function destroy($sheep_id)
+    {
+        Sheeps::where('id', $sheep_id)->delete();
+        return redirect()->route('sheeps');
+    }
+
+
+    public function update(Request $req, $id)
+    {
+        $animals = Sheeps::findorFail($id);
+        $animals->sheep_id=$req->eid_nr;
+        $animals->dzimums=$req->edzimums;
+        $animals->vecums=$req->evecums;
+        $animals->save();
+        return redirect()->route('sheeps');
+    }
     
 }

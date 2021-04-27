@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Sheeps extends Model
 {
     protected $table = 'sheeps';
+    protected $fillable = [
+        'sheep_id', 'dzimums', 'vecums'
+    ];
 }
