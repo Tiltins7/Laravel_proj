@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\sheepsController;
+use App\Http\Controllers\TreatmentController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 /*
@@ -23,7 +24,13 @@ Route::group(['prefix' => 'animal_species', 'middleware' => 'auth'], function ()
     Route::get('/sheeps', [sheepsController::class, "index"])->name('sheeps');
     Route::post('/submit', [sheepsController::class, "save"])->name('sumbit');
     Route::get('animal_species/sheeps/{sheep_id}/delete', [sheepsController::class, "destroy"]);
+
 });
+
+Route::get('animal_species/treatmentinfo/{id}',[TreatmentController::class, "animalid"])->name('treatmentinfo')->middleware('auth');
+
+
+Route::get('/treatmentinfo', [TreatmentController::class, "index"]);
 
 Route::resource('sheeps', 'SheepsController');
 

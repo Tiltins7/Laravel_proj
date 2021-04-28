@@ -11,4 +11,8 @@ class Sheeps extends Model
     protected $fillable = [
         'sheep_id', 'dzimums', 'vecums'
     ];
+
+    public function Treatment_info(){
+        return $this->hasMany("App\Treatment_info");
+    }
 }

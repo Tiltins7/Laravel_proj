@@ -114,7 +114,7 @@
                         <label for="edzimums" class="col-sm-4 col-form-label">Dzimums:*</label>
                         <div class="col-sm-8">
                             <!-- <input name="edzimums" class="form-control" placeholder="Dzimums" id="edzimums"> -->
-                            <select name="edzimums" class="form-control" id="edzimums">
+                            <select name="dzimums" class="form-control" id="dzimums">
                                 <option>Vīriešu</option>
                                 <option>Sieviešu</option>
                             </select>
@@ -163,7 +163,7 @@
             'columns': [{
                     data: null,
                     render: function(data, type, row) {
-                        return '<a style="font-weight: bold; color: black; " href="sheeps/' + data.sheep_id + '">' + data.sheep_id + '</a>'
+                        return '<a style="font-weight: bold; color: black; " href="treatmentinfo/'+data.id+'">' + data.sheep_id + '</a>'
                     }
                 },
                 {
@@ -191,7 +191,7 @@
                 render: function(data, type, row) {
                     return '<a class="btn btn-link edit" style="color:blue; padding:0;" > Labot</a>' +
                         ' / ' +
-                        '<a type="button" name="delete" class="btn btn-link" style="color:red; padding:0;" href="animal_species/sheeps/' + row["id"] + '/delete">Dzēst</a>'
+                        '<a type="button" name="delete" class="btn btn-link" style="color:red; padding:0;" href="animal_species/sheeps/' + row["id"] + '/delete">Delete</a>'
                 }
             }]
         });

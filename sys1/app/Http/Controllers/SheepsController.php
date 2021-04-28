@@ -45,7 +45,9 @@ class sheepsController extends Controller
         $animals->sheep_id=$req->eid_nr;
         $animals->dzimums=$req->edzimums;
         $animals->vecums=$req->evecums;
+        echo $id;
         $animals->save();
+        
         return redirect()->route('sheeps');
     }
     

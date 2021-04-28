@@ -1,0 +1,20 @@
+ .container{
+     margin-top:10px;
+ }
+
+td{
+    text-align:center;
+}
+
+thead{
+    text-align: center;
+}
+
+ .table-center{
+    margin: 10px auto;
+}
+
+.card-title{
+    font-weight: bold;
+    padding: 10px;
+}
